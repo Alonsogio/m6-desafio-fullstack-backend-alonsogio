@@ -4,7 +4,7 @@ import "dotenv/config";
 import Client from "../../entities/client.entity";
 import { AppError } from "../../errors/appError";
 import { IClientLogin } from "../../interfaces/clients.interfaces";
-import { compare } from "bcrypt";
+import { compare } from "bcryptjs";
 
 export const createSessionService = async ({
   email,
