@@ -1,6 +1,5 @@
 node_modules
-dist/
+dist
 yarn.lock
 .env
-.vscode/
 db.sqlite3
