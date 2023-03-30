@@ -6,7 +6,7 @@ import {
   IClientResponse,
 } from "../../interfaces/clients.interfaces";
 import { clientSerializer } from "../../serializers/client.serializers";
-import { hash } from "bcrypt";
+import { hash } from "bcryptjs";
 
 export const createClientService = async (
   clientData: IClientRequest
