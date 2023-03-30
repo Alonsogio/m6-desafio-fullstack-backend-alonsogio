@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { IClientRequest } from "../interfaces/clients.interfaces";
-import { createClientService } from "../services/clients.service";
+import { IClientRequest } from "../../interfaces/clients.interfaces";
+import { createClientService } from "../../services/Client/createClient.service";
 
 export const createClientController = async (req: Request, res: Response) => {
   const clientData: IClientRequest = req.body;

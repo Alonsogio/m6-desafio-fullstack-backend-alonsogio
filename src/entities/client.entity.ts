@@ -1,9 +1,12 @@
+import { hashSync } from "bcryptjs";
 import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
   OneToMany,
+  BeforeInsert,
+  BeforeUpdate,
 } from "typeorm";
 import { Contact } from "./contact.entity";
 
@@ -19,6 +22,9 @@ class Client {
   email: string;
 
   @Column()
+  password: string;
+
+  @Column()
   contact: string;
 
   @CreateDateColumn({ type: "date" })
@@ -26,6 +32,12 @@ class Client {
 
   @OneToMany(() => Contact, (contacts) => contacts.client)
   contacts: Contact[];
+
+  @BeforeInsert()
+  @BeforeUpdate()
+  hashPassword() {
+    this.password = hashSync(this.password, 10);
+  }
 }
 
 export default Client;
