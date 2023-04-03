@@ -23,5 +23,8 @@
     "typeorm": "^0.3.11",
     "typescript": "^5.0.2",
     "yup": "^0.32.11"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }
