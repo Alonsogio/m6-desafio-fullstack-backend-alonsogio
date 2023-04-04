@@ -9,6 +9,7 @@ import {
   clientSerializer,
   clientSerializerPass,
 } from "../serializers/client.serializers";
+import { listClientByIdController } from "../controllers/Client/listClientById.controllers";
 
 export const clientRoutes = Router();
 
@@ -19,6 +20,8 @@ clientRoutes.post(
 );
 
 clientRoutes.get("", ensureAuthMiddleware, listClientsController);
+
+clientRoutes.get("/:id", listClientByIdController);
 
 clientRoutes.patch(
   "/:id",
