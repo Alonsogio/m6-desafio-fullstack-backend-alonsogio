@@ -5,13 +5,14 @@ import { AppError } from "../../errors/appError";
 export const listClientByIdService = async (clientId: string) => {
   const clientRepository = AppDataSource.getRepository(Client);
 
-  const findClient = await clientRepository.findOneBy({
-    id: clientId,
+  const clientfind = await clientRepository.findOne({
+    where: { id: clientId },
+    relations: { contacts: true },
   });
 
-  if (!findClient) {
+  if (!clientfind) {
     throw new AppError("invalid client id!", 404);
   }
 
-  return findClient;
+  return clientfind;
 };
