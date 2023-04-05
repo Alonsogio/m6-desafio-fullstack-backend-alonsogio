@@ -9,7 +9,7 @@ import { compare } from "bcryptjs";
 export const createSessionService = async ({
   email,
   password,
-}: IClientLogin): Promise<string> => {
+}: IClientLogin): Promise<any> => {
   const clientRepository = AppDataSource.getRepository(Client);
   const client = await clientRepository.findOneBy({
     email: email,
@@ -29,5 +29,11 @@ export const createSessionService = async ({
     subject: client.id,
     expiresIn: "24h",
   });
-  return token;
+
+  const clientinfo = {
+    id: client.id,
+    token: token,
+  };
+
+  return clientinfo;
 };
