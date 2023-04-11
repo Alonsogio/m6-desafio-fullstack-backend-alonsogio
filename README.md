@@ -8,6 +8,12 @@
 <br/>
 <br/>
 
+# Aviso
+
+- `Quando for utilizar o frontend não é necessario rodar a api, porque foi feito o deploy.`
+  ‌
+<br/>
+<br/>
 
 
 
@@ -20,7 +26,7 @@
 <br/>
 
 ```http
-POST /clients
+	POST /clients
 ```
 
 <br/>
@@ -67,7 +73,7 @@ POST /clients
 <br/>
 
 ```http
-GET /clients
+	GET /clients
 ```
 
 <br/>
@@ -268,7 +274,7 @@ GET /clients
 <br/>
 
 ```http
-GET /contacts
+	GET /contacts
 ```
 
 <br/>
@@ -318,7 +324,7 @@ GET /contacts
 <br/>
 
 ```http
-  PATCH /contacts/<id>
+  	PATCH /contacts/<id>
 ```
 <br/>
 
