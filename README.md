@@ -1,3 +1,16 @@
+# Como rodar a api?
+
+- `yarn`
+- `yarn migration:prod`
+- `yarn build`
+- `yarn start`
+  ‌
+<br/>
+<br/>
+
+
+
+
 # Rota Client
 
 <br/>
